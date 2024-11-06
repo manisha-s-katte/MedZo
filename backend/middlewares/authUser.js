@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken'
+// import upload from '../middlewares/multer.js';
 
 // user authentication middleware
 const authUser = async (req, res, next) => {
