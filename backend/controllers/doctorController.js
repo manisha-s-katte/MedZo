@@ -79,7 +79,7 @@ const appointmentComplete = async (req, res) => {
             return res.json({ success: true, message: 'Appointment Completed' })
         }
 
-        res.json({ success: false, message: 'Appointment Cancelled' })
+        res.json({ success: false, message: 'Cancellation Failed' })
 
     } catch (error) {
         console.log(error)
@@ -179,7 +179,7 @@ const doctorDashboard = async (req, res) => {
             earnings,
             appointments: appointments.length,
             patients: patients.length,
-            latestAppointments: appointments.reverse()
+            latestAppointments: appointments.reverse().slice(0, 5)
         }
 
         res.json({ success: true, dashData })
