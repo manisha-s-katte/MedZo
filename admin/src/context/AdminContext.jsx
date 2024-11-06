@@ -122,7 +122,7 @@ const AdminContextProvider = (props) => {
         cancelAppointment,
         dashData
     }
-
+{/*check*/}
     return (
         <AdminContext.Provider value={value}>
             {props.children}
